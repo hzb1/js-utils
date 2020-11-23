@@ -2,7 +2,7 @@
  * 解构时间
  * @param date
  */
-export const deconstructDate = (date: Date = new Date()): deconstructDateInterface => {
+const deconstructDate = (date: Date = new Date()): deconstructDateInterface => {
   const year = date.getFullYear();
   const month = date.getMonth() + 1;
   const day = date.getDate();
@@ -21,7 +21,7 @@ export const deconstructDate = (date: Date = new Date()): deconstructDateInterfa
     minute: minute < 10 ? `0${minute}` : String(minute), // 分
     second: second < 10 ? `0${second}` : String(second), // 秒
     milliSecond: String(milliSecond), // 秒
-  }
+  };
 };
 
 export interface deconstructDateInterface {
@@ -34,3 +34,5 @@ export interface deconstructDateInterface {
   second: string,
   milliSecond: string,
 }
+
+export default deconstructDate;

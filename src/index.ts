@@ -1,7 +1,6 @@
-import date from "./date";
-import number from "./number";
-import document from "./document";
-
+import date from './date';
+import number from './number';
+import document from './document';
 
 export default {
   date,

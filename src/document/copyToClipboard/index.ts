@@ -1,8 +1,7 @@
-
 export const copyToClipboard = (value: string): boolean => {
   const bool: boolean = document.execCommand('copy');
   if (!bool) {
-    console.warn(`您的浏览器不支持 document.execCommand`);
+    console.warn('您的浏览器不支持 document.execCommand');
     return false;
   }
   const input = document.createElement('input');

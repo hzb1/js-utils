@@ -1,8 +1,6 @@
-import {deconstructDate, deconstructDateInterface} from "./index";
-
+import deconstructDate, { deconstructDateInterface } from './index';
 
 describe('deconstructDate 解构日期', () => {
-
   const deconstruct = (date) => {
     const yyyy = date.getFullYear();
     const m = date.getMonth() + 1;
@@ -16,7 +14,9 @@ describe('deconstructDate 解构日期', () => {
     const hh = hour < 10 ? `0${hour}` : String(hour); // 时
     const mmm = minute < 10 ? `0${minute}` : String(minute); // 分
     const ss = second < 10 ? `0${second}` : String(second); // 秒
-    return { yyyy, mm, dd, hh, mmm, ss };
+    return {
+      yyyy, mm, dd, hh, mmm, ss,
+    };
   };
 
   {
@@ -31,7 +31,6 @@ describe('deconstructDate 解构日期', () => {
     it(`默认参数 day预期等于 ${dd}`, () => expect(day).to.equal(`${dd}`));
   }
 
-
   {
     const data = new Date('2020/9/1');
     const { yyyy, mm, dd } = deconstruct(data);
@@ -43,7 +42,6 @@ describe('deconstructDate 解构日期', () => {
 
     it(`2020/9/1 day预期等于 ${dd}`, () => expect(day).to.equal(`${dd}`));
   }
-
 
   {
     const data = new Date('2020/12/28 9:59:30');
@@ -57,7 +55,6 @@ describe('deconstructDate 解构日期', () => {
     it(`2020/12/28 day预期等于 ${dd}`, () => expect(day).to.equal(`${dd}`));
   }
 
-
   {
     const data = new Date('2020/12/28 9:59:30');
     const { hh, mmm, ss } = deconstruct(data);
@@ -69,6 +66,4 @@ describe('deconstructDate 解构日期', () => {
 
     it(`9:59:30 second预期等于 ${ss}`, () => expect(second).to.equal(`${ss}`));
   }
-
-
 });

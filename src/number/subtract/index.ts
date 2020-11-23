@@ -1,6 +1,6 @@
-
 export const subtract = (num1: number, num2:number): number => {
-  let r1, r2, m, n;
+  let r1; let r2; let m; let
+    n;
   try {
     r1 = num1.toString().split('.')[1].length;
   } catch (e) {

@@ -4,7 +4,7 @@
  * @param obj2
  */
 const isEqual = (obj1: object, obj2: object): boolean => {
-  if(typeof obj1 !== typeof obj2) return false;
+  if (typeof obj1 !== typeof obj2) return false;
   // if (obj instanceof Array) return obj.length === 0;
   return true;
 };
