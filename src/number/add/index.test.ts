@@ -1,7 +1,7 @@
-import { add } from './index';
+import add from './index';
 
 describe('add 相加', () => {
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 5; i += 1) {
     it(`${i}: 0.1 加 0.2 应该等于 0.3`, () => {
       expect(add(0.1, 0.2)).to.equal(0.3);
     });

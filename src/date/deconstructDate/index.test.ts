@@ -38,7 +38,7 @@ describe('deconstructDate 解构日期', () => {
 
     it(`2020/9/1 year预期等于 ${yyyy}`, () => expect(year).to.equal(`${yyyy}`));
 
-    it(`2020/9/1 month预期等于 ${yyyy}`, () => expect(month).to.equal(`${mm}`));
+    it(`2020/9/1 month预期等于 ${mm}`, () => expect(month).to.equal(`${mm}`));
 
     it(`2020/9/1 day预期等于 ${dd}`, () => expect(day).to.equal(`${dd}`));
   }
@@ -50,7 +50,7 @@ describe('deconstructDate 解构日期', () => {
 
     it(`2020/12/28 year预期等于 ${yyyy}`, () => expect(year).to.equal(`${yyyy}`));
 
-    it(`2020/12/28 month预期等于 ${yyyy}`, () => expect(month).to.equal(`${mm}`));
+    it(`2020/12/28 month预期等于 ${mm}`, () => expect(month).to.equal(`${mm}`));
 
     it(`2020/12/28 day预期等于 ${dd}`, () => expect(day).to.equal(`${dd}`));
   }

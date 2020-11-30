@@ -1,7 +1,7 @@
-import { subtract } from './index';
+import subtract from './index';
 
 describe('subtract 相减', () => {
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 5; i += 1) {
     it(`${i}: 0.3 减 0.2 应该等于 0.1`, () => {
       expect(subtract(0.3, 0.2)).to.equal(0.1);
     });

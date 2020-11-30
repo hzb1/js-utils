@@ -24,10 +24,10 @@ const dateFormat = (format = 'yyyy年MM月dd日', date: Date = new Date()): stri
     newFormat = newFormat.replace(RegExp.$1, (`${now.getFullYear()}`).substr(4 - RegExp.$1.length));
   }
 
-  Object.keys(o).forEach(k => {
+  Object.keys(o).forEach((k) => {
     const item = o[k];
     if (new RegExp(`(${k})`).test(format)) {
-      newFormat = newFormat.replace(RegExp.$1, (RegExp.$1.length == 1) ? item : ((`00${item}`).substr((`${item}`).length)));
+      newFormat = newFormat.replace(RegExp.$1, (RegExp.$1.length === 1) ? item : ((`00${item}`).substr((`${item}`).length)));
     }
   });
 

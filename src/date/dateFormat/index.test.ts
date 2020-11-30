@@ -43,7 +43,8 @@ describe('dateFormat 测试', () => {
   }
 
   {
-    const date = new Date('2020/12/28 12:35:10:120');
+    const date = new Date('2020/12/28 12:35:10');
+    date.setMilliseconds(120);
     const {
       year, month, day, hour, minute, second, milliSecond,
     }: deconstructDateInterface = deconstructDate(date);

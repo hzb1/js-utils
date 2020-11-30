@@ -1,4 +1,5 @@
-import { isSameDay } from './index';
+import isSameDay from './index';
+/* eslint-disable no-unused-expressions */
 
 describe('isSameDay 判断两个时间戳是不是同一天', () => {
   it('同天测试1', () => {

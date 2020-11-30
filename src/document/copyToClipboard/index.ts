@@ -1,4 +1,9 @@
-export const copyToClipboard = (value: string): boolean => {
+/**
+ * 复制内容到剪切板
+ * @param value
+ */
+
+const copyToClipboard = (value: string): boolean => {
   const bool: boolean = document.execCommand('copy');
   if (!bool) {
     console.warn('您的浏览器不支持 document.execCommand');
@@ -14,3 +19,5 @@ export const copyToClipboard = (value: string): boolean => {
   document.body.removeChild(input);
   return true;
 };
+
+export default copyToClipboard;

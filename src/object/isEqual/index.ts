@@ -5,8 +5,7 @@
  */
 const isEqual = (obj1: object, obj2: object): boolean => {
   if (typeof obj1 !== typeof obj2) return false;
-  // if (obj instanceof Array) return obj.length === 0;
-  return true;
+  return JSON.stringify(obj1) === JSON.stringify(obj2);
 };
 
 export default isEqual;

@@ -11,8 +11,11 @@
   "scripts": {
     "build dev": "webpack --config build/webpack.config.js --mode development",
     "build prod": "webpack --config build/webpack.config.js --mode production",
-    "karma start": "karma start ./configs/karma.conf.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "docsify serve": "docsify serve docs",
+    "test --chrome": "karma start ./configs/karma.conf.js --browsers Chrome",
+    "test --firefox": "karma start ./configs/karma.conf.js --browsers Firefox",
+    "test --safari": "karma start ./configs/karma.conf.js --browsers Safari",
+    "test --ie": "karma start ./configs/karma.conf.js --browsers IE",
     "eslint": "eslint src/ --ext ts ",
     "eslint --fix": "eslint src/ --ext ts --fix"
   },

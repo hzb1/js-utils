@@ -1,11 +1,14 @@
 /**
  *
  * @param object
- * @returns string < number || bigint || string || boolean || symbol || undefined || function || object || array || math>
+ * @returns typeString
  */
-const getTypeOf = (object: any): string => {
-  const typeofs = typeof object;
-  if (typeofs === 'object') {
+
+type typeString = 'number' | 'bigint' | 'string' | 'boolean' | 'symbol' | 'undefined' | 'function' | 'object' | 'array' | 'math' | 'date' | 'null';
+
+const getTypeOf = (object: any): typeString => {
+  const types = typeof object;
+  if (types === 'object') {
     const toString = Object.prototype.toString.call(object);
     switch (toString) {
       case '[object Date]':
@@ -16,9 +19,11 @@ const getTypeOf = (object: any): string => {
         return 'array';
       case '[object Null]':
         return 'null';
+      default:
+        return 'object';
     }
   }
-  return typeofs;
+  return types;
 };
 
 export default getTypeOf;

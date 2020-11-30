@@ -1,4 +1,4 @@
-import { isDate } from './index';
+import isDate from './index';
 
 describe('isDate 是否是日期对象', () => {
   it('new Date() 预期等于 true', () => expect(isDate(new Date())).to.be.ok);

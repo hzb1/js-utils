@@ -3,4 +3,6 @@
  * @param dateString1
  * @param dateString2
  */
-export const isSameDay = (dateString1, dateString2):boolean => new Date(dateString1).toDateString() === new Date(dateString2).toDateString();
+const isSameDay = (dateString1, dateString2): boolean => new Date(dateString1).toDateString() === new Date(dateString2).toDateString();
+
+export default isSameDay;

@@ -2,6 +2,18 @@
  * 解构时间
  * @param date
  */
+
+export interface deconstructDateInterface {
+  year: string,
+  month: string,
+  day: string,
+  week: string,
+  hour: string,
+  minute: string,
+  second: string,
+  milliSecond: string,
+}
+
 const deconstructDate = (date: Date = new Date()): deconstructDateInterface => {
   const year = date.getFullYear();
   const month = date.getMonth() + 1;
@@ -23,16 +35,5 @@ const deconstructDate = (date: Date = new Date()): deconstructDateInterface => {
     milliSecond: String(milliSecond), // 秒
   };
 };
-
-export interface deconstructDateInterface {
-  year: string,
-  month: string,
-  day: string,
-  week: string,
-  hour: string,
-  minute: string,
-  second: string,
-  milliSecond: string,
-}
 
 export default deconstructDate;

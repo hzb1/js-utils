@@ -20,5 +20,14 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/no-extensions': 'off',
     'import/extensions': 'off',
+    'max-len': ['error', { code: 240 }],
+    'no-console': 'off',
+    // 'no-restricted-syntax': [
+    //   'error',
+    //   {
+    //     selector: 'CallExpression[callee.object.name=\'console\'][callee.property.name!=/^(log|warn|error|info|trace)$/]',
+    //     message: 'Unexpected property on console object was called',
+    //   },
+    // ],
   },
 };

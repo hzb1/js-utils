@@ -1,4 +1,4 @@
-import { copyToClipboard } from './copyToClipboard';
+import copyToClipboard from './copyToClipboard';
 
 export default {
   copyToClipboard,
