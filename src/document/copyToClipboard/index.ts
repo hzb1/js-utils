@@ -1,8 +1,8 @@
 /**
  * 复制内容到剪切板
  * @param value
+ * @return boolean
  */
-
 const copyToClipboard = (value: string): boolean => {
   const bool: boolean = document.execCommand('copy');
   if (!bool) {

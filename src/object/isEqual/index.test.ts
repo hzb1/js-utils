@@ -34,7 +34,7 @@ describe('isEqual 对象是否相等', () => {
   {
     const a = { name: undefined };
     const b = {};
-    it('属性undefined', () => expect(isEqual(a, b)).to.not.ok);
+    it('属性undefined', () => expect(isEqual(a, b)).to.not);
   }
 
   {

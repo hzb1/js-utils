@@ -5,6 +5,11 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, '../dist'),
+    library: 'jsUtils',
+    // libraryTarget: 'var',
+    // libraryTarget: 'this',
+    libraryTarget: 'umd',
+    // libraryTarget: 'umd',
   },
   module: {
     rules: [

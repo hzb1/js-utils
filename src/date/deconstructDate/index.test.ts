@@ -24,11 +24,11 @@ describe('deconstructDate 解构日期', () => {
     const { yyyy, mm, dd } = deconstruct(data);
     const { year, month, day }:deconstructDateInterface = deconstructDate();
 
-    it(`默认参数 year预期等于 ${yyyy}`, () => expect(year).to.equal(`${yyyy}`));
+    it('默认参数 year', () => expect(year).to.equal(`${yyyy}`));
 
-    it(`默认参数 month预期等于 ${yyyy}`, () => expect(month).to.equal(`${mm}`));
+    it('默认参数 month', () => expect(month).to.equal(`${mm}`));
 
-    it(`默认参数 day预期等于 ${dd}`, () => expect(day).to.equal(`${dd}`));
+    it('默认参数 day', () => expect(day).to.equal(`${dd}`));
   }
 
   {
@@ -44,7 +44,7 @@ describe('deconstructDate 解构日期', () => {
   }
 
   {
-    const data = new Date('2020/12/28 9:59:30');
+    const data = new Date('2020/12/28 11:59:30');
     const { yyyy, mm, dd } = deconstruct(data);
     const { year, month, day }:deconstructDateInterface = deconstructDate(data);
 

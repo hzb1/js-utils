@@ -5,9 +5,25 @@ describe('dateFormat 测试', () => {
   {
     const date = new Date();
     const { year, month, day }: deconstructDateInterface = deconstructDate(date);
-    const expectValue = `${year}年${month}月${day}日`;
-    it(`默认参数 应该等于 ${expectValue}`, () => {
-      expect(dateFormat()).to.equal(expectValue);
+    const expectValue = `${year}-${month}-${day}`;
+    it('默认参数', () => expect(dateFormat()).to.equal(expectValue));
+  }
+
+  {
+    const date = new Date();
+    const { year, month, day }: deconstructDateInterface = deconstructDate(date);
+    const expectValue = `${year}-${month}-${day}`;
+    it(`传入时间戳 ${expectValue}`, () => {
+      expect(dateFormat(date.getTime())).to.equal(expectValue);
+    });
+  }
+
+  {
+    const date = new Date();
+    const { year, month, day }: deconstructDateInterface = deconstructDate(date);
+    const expectValue = `${year}-${month}-${day}`;
+    it(`传入字符串 ${expectValue}`, () => {
+      expect(dateFormat(expectValue)).to.equal(expectValue);
     });
   }
 
@@ -18,7 +34,7 @@ describe('dateFormat 测试', () => {
     }: deconstructDateInterface = deconstructDate(date);
     const expectValue = `${year}-${month}-${day} ${hour}:${minute}:${second}`;
     it(`yyyy-MM-dd hh:mm:ss 应该等于 ${expectValue}`, () => {
-      expect(dateFormat('yyyy-MM-dd hh:mm:ss', date)).to.equal(expectValue);
+      expect(dateFormat(date, 'yyyy-MM-dd hh:mm:ss')).to.equal(expectValue);
     });
   }
 
@@ -27,7 +43,7 @@ describe('dateFormat 测试', () => {
     const { hour, minute }: deconstructDateInterface = deconstructDate(date);
     const expectValue = `${hour}:${minute}`;
     it(`hh:mm 应该等于 ${expectValue}`, () => {
-      expect(dateFormat('hh:mm', date)).to.equal(expectValue);
+      expect(dateFormat(date, 'hh:mm')).to.equal(expectValue);
     });
   }
 
@@ -38,7 +54,7 @@ describe('dateFormat 测试', () => {
     }: deconstructDateInterface = deconstructDate(date);
     const expectValue = `${month}月${day}日 ${hour}:${minute}`;
     it(`MM月dd日 hh:mm 应该等于 ${expectValue}`, () => {
-      expect(dateFormat('MM月dd日 hh:mm', date)).to.equal(expectValue);
+      expect(dateFormat(date, 'MM月dd日 hh:mm')).to.equal(expectValue);
     });
   }
 
@@ -50,7 +66,12 @@ describe('dateFormat 测试', () => {
     }: deconstructDateInterface = deconstructDate(date);
     const expectValue = `${year}-${month}-${day} ${hour}:${minute}:${second}.${milliSecond}`;
     it(`milliSecond 应该等于 ${expectValue}`, () => {
-      expect(dateFormat('yyyy-MM-dd hh:mm:ss.S', date)).to.equal(expectValue);
+      expect(dateFormat(date, 'yyyy-MM-dd hh:mm:ss.S')).to.equal(expectValue);
     });
+  }
+
+  // eslint-disable-next-line no-lone-blocks
+  {
+    it('传入非法参数', () => expect(dateFormat('202200000')).to.equal(''));
   }
 });

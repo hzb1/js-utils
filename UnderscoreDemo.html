@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.2/underscore-umd-min.js"></script>-->
+    <script src="https://unpkg.com/underscore@1.13.2/underscore-umd-min.js"></script>
+    <script src="./dist/bundle.js"></script>
+</head>
+<body>
+<script>
+    var _i = 0;
+    var _f = _.debounce(() => {
+        _i += 1;
+        console.log('_f', _i);
+        return _i;
+    }, 300);
+    _f()
+    _f()
+    _f()
+    setTimeout(() => console.log(_i), 10)
+    setTimeout(() => console.log('end', i), 310)
+</script>
+
+<script>
+    var i = 0;
+    var f = u.debounce(() => {
+        i += 1;
+        console.log('f', i);
+        return i;
+    }, 300);
+    f()
+    f()
+    f()
+    setTimeout(() => console.log('my', i), 10)
+    setTimeout(() => console.log('my end', i), 310)
+</script>
+
+</body>
+</html>

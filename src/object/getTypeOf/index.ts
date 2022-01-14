@@ -6,7 +6,7 @@
 
 type typeString = 'number' | 'bigint' | 'string' | 'boolean' | 'symbol' | 'undefined' | 'function' | 'object' | 'array' | 'math' | 'date' | 'null';
 
-const getTypeOf = (object: any): typeString => {
+const getTypeOf = <T>(object: T): typeString => {
   const types = typeof object;
   if (types === 'object') {
     const toString = Object.prototype.toString.call(object);
