@@ -10,31 +10,39 @@
 <body>
 <script>
     var _i = 0;
-    var _f = _.debounce(() => {
-        _i += 1;
-        console.log('_f', _i);
-        return _i;
-    }, 300);
-    _f()
-    _f()
-    _f()
-    setTimeout(() => console.log(_i), 10)
-    setTimeout(() => console.log('end', i), 310)
+    // var _f = u.debounce((...age) => {
+    //     _i = _i + 1;
+    //     console.log('_ f', _i, age, this);
+    //     return _i;
+    // }, 1000, true);
+    var o = {
+        i: 0,
+        f: u.debounce(function (...age) {
+            this.i = this.i + 1;
+            console.log('_ f', this.i, age, this);
+            return this.i;
+        }, 300, true)
+    }
+    var _f = o.f.bind(o);
+    _f(0);
+    setTimeout(() => console.log('hi', o.i), 10);
+    // setTimeout(() => _f(310), 310)
+    // setTimeout(() => _f(1600), 1600)
 </script>
 
-<script>
-    var i = 0;
-    var f = u.debounce(() => {
-        i += 1;
-        console.log('f', i);
-        return i;
-    }, 300);
-    f()
-    f()
-    f()
-    setTimeout(() => console.log('my', i), 10)
-    setTimeout(() => console.log('my end', i), 310)
-</script>
+<!--<script>-->
+<!--    var i = 0;-->
+<!--    var f = u.debounce(() => {-->
+<!--        i += 1;-->
+<!--        console.log('my f', i);-->
+<!--        return i;-->
+<!--    }, 1000);-->
+<!--    f()-->
+<!--    f()-->
+<!--    f()-->
+<!--    setTimeout(() => console.log('my', i), 100)-->
+<!--    setTimeout(() => console.log('my end', i), 310)-->
+<!--</script>-->
 
 </body>
 </html>
