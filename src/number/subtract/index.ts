@@ -18,6 +18,7 @@ const subtract = (num1: number, num2:number): number => {
   const m = 10 ** Math.max(r1, r2);
   const n = (r1 >= r2) ? r1 : r2;
   return Number((Math.round(num1 * m - num2 * m) / m).toFixed(n));
+  // return (num1 * m - num2 * m) / m;
 };
 
 export default subtract;

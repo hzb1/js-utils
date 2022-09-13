@@ -8,6 +8,7 @@
     <script src="./dist/bundle.js"></script>
 </head>
 <body>
+<input id="input">
 <script>
     var _i = 0;
     // var _f = u.debounce((...age) => {
@@ -28,6 +29,13 @@
     setTimeout(() => console.log('hi', o.i), 10);
     // setTimeout(() => _f(310), 310)
     // setTimeout(() => _f(1600), 1600)
+
+    var input = document.querySelector('#input');
+
+    var onChange = u.debounce(function (e) {
+        console.log('value', e.target.value)
+    }, 2000)
+    input.addEventListener('input', onChange)
 </script>
 
 <!--<script>-->

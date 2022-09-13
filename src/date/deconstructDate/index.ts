@@ -14,15 +14,17 @@ export interface deconstructDateInterface {
   milliSecond: string,
 }
 
+// eslint-disable-next-line no-shadow
 const deconstructDate = (date: Date = new Date()): deconstructDateInterface => {
-  const year = date.getFullYear();
-  const month = date.getMonth() + 1;
-  const day = date.getDate();
-  const week = date.getDay();
-  const hour = date.getHours();
-  const minute = date.getMinutes();
-  const second = date.getSeconds();
-  const milliSecond = date.getMilliseconds();
+  const d = new Date(date as any);
+  const year = d.getFullYear();
+  const month = d.getMonth() + 1;
+  const day = d.getDate();
+  const week = d.getDay();
+  const hour = d.getHours();
+  const minute = d.getMinutes();
+  const second = d.getSeconds();
+  const milliSecond = d.getMilliseconds();
 
   return {
     year: String(year), // 年
