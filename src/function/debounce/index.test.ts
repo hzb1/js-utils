@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import debounce from './index';
 
 describe('debounce 防抖函数', () => {

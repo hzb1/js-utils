@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import clone from './index';
 
 describe('clone 克隆函数', () => {

@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import add from './index';
 
 describe('add 相加', () => {

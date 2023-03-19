@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import deconstructDate, { deconstructDateInterface } from './index';
 
 describe('deconstructDate 解构日期', () => {

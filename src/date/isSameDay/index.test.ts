@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import isSameDay from './index';
 /* eslint-disable no-unused-expressions */
 

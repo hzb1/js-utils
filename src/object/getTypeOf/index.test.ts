@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import getTypeOf from './index';
 
 describe('getTypeOf 是否是对象', () => {

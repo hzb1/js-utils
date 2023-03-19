@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import deepClone from './index';
 
 describe('deepClone 深拷贝', () => {

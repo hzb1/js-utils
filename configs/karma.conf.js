@@ -27,6 +27,14 @@ module.exports = function (config) {
       // 匹配源文件，并使用 webpack 进行预处理
       'src/**/*.ts': ['webpack'],
     },
+    plugins: [
+      'karma-webpack',
+      'karma-mocha',
+      'karma-chai',
+      'karma-chrome-launcher',
+      'karma-spec-reporter',
+      'karma-coverage-istanbul-reporter',
+    ],
 
     webpack: {
       mode: 'development',
@@ -120,5 +128,6 @@ module.exports = function (config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity,
+
   });
 };

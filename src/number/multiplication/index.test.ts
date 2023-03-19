@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import multiplication from './index';
 
 describe('multiplication 相乘', () => {

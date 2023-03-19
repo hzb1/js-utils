@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import subtract from './index';
 
 describe('subtract 相减', () => {

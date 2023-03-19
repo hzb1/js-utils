@@ -22,6 +22,7 @@ module.exports = {
     'import/extensions': 'off',
     'max-len': ['error', { code: 240 }],
     'no-console': 'off',
+    'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.test.ts', '**/*.spec.ts'] }],
     // 'no-restricted-syntax': [
     //   'error',
     //   {

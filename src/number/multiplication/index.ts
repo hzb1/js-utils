@@ -15,7 +15,7 @@ const multiplication = (num1: number, num2: number): number => {
   } catch (e) {
     r2 = 0;
   }
-  const m = 10 ** Math.max(r1, r2);
+  const m = 10 ** (r1 + r2);
   return ((num1 * m) * (num2)) / m;
 };
 

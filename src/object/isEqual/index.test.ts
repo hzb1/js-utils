@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import isEqual from './index';
 
 describe('isEqual 对象是否相等', () => {

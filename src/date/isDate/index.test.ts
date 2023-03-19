@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import isDate from './index';
 
 describe('isDate 是否是日期对象', () => {

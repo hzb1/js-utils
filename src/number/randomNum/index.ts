@@ -4,6 +4,7 @@
  * @param maxNum
  * @returns {number}
  */
+// eslint-disable-next-line func-names
 const randomNum = function (minNum: number, maxNum?: number): number {
   switch (arguments.length) {
     case 1:
