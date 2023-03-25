@@ -1,7 +1,4 @@
-type DebouncedFunc = {
-  (): any;
-  cancel: () => void;
-};
+/* eslint-disable no-unused-vars */
 
 /**
  * 防抖函数
@@ -10,12 +7,11 @@ type DebouncedFunc = {
  * @param {number} wait 等待时间
  * @param immediate
  */
-const debounce = (
-  // eslint-disable-next-line no-unused-vars
-  func: (...age) => any,
+const debounce = <T extends (...args: any[]) => any >(
+  func: T,
   wait: number = 300,
   immediate: boolean = false, // 第一次时，是否立即执行
-): DebouncedFunc => {
+) => {
   let timeout: number | null;
   let result;
   let parameter: any[];
@@ -32,7 +28,7 @@ const debounce = (
     }
   };
   // eslint-disable-next-line func-names
-  const debouncedFunc = function (...ages) {
+  const debouncedFunc = function (...ages: Parameters<T>): ReturnType<T> {
     context = this;
     previous = Date.now();
     parameter = ages;

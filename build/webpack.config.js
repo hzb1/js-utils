@@ -8,7 +8,7 @@ module.exports = {
     library: 'jsUtils',
     // libraryTarget: 'var',
     // libraryTarget: 'this',
-    libraryTarget: 'umd',
+    // libraryTarget: 'umd',
     // libraryTarget: 'umd',
   },
   module: {

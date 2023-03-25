@@ -81,4 +81,13 @@ describe('debounce 防抖函数', () => {
       }, 500);
     });
   }
+
+  {
+    const f = debounce((a: number, b: number): number => a + b, 100, true);
+    it('测试参数', (done) => {
+      const v = f(1, 2);
+      expect(v).to.equal(3);
+      done();
+    });
+  }
 });
