@@ -7,28 +7,28 @@
  * @param {number} wait 等待时间
  * @param immediate
  */
-const debounce = <T extends (...args: any[]) => any >(
+const debounce = <T extends (...args: any[]) => any>(
   func: T,
   wait: number = 300,
   immediate: boolean = false, // 第一次时，是否立即执行
 ) => {
   let timeout: number | null;
-  let result;
-  let parameter: any[];
+  let result: ReturnType<T>;
+  let parameter: Parameters<T> | null;
   let previous: number; // 之前的时间
-  let context;
+  let context: any;
   const onRun = () => {
     const passed = Date.now() - previous;
     if (passed < wait) {
       timeout = setTimeout(onRun, wait - passed);
     } else {
       timeout = null;
-      if (!immediate) result = func.apply(context, parameter);
+      if (!immediate) result = func.apply(context, parameter!);
       if (!timeout) parameter = null;
     }
   };
   // eslint-disable-next-line func-names
-  const debouncedFunc = function (...ages: Parameters<T>): ReturnType<T> {
+  const debouncedFunc = function (this: any, ...ages: Parameters<T>): ReturnType<T> {
     context = this;
     previous = Date.now();
     parameter = ages;
@@ -39,7 +39,7 @@ const debounce = <T extends (...args: any[]) => any >(
     return result;
   };
   debouncedFunc.cancel = () => {
-    clearTimeout(timeout);
+    if (timeout) clearTimeout(timeout);
     timeout = null;
     parameter = null;
   };
