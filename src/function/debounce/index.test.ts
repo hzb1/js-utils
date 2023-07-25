@@ -57,10 +57,12 @@ describe('debounce 防抖函数', () => {
     }, 300, true);
     it('防抖函数 立即执行', (done) => {
       f();
+      setTimeout(f, 10);
+      setTimeout(f, 100);
       setTimeout(() => {
         expect(i).to.equal(1);
         done();
-      }, 10);
+      }, 1000);
     });
   }
 
@@ -69,10 +71,10 @@ describe('debounce 防抖函数', () => {
     const f = debounce(() => {
       i += 1;
       return i;
-    }, 100);
+    }, 100, true);
     it('防抖函数 wait', (done) => {
       f();
-      setTimeout(f, 100);
+      setTimeout(f, 100); // 这个会执行，因为没有小于`wait`
       setTimeout(f, 180); // 这个不会执行，所以结果是3
       setTimeout(f, 300);
       setTimeout(() => {
