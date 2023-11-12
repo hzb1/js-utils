@@ -1,9 +1,9 @@
 /**
- * 乘法
- * @param {String} num1
- * @param {String} num2
+ * 除
+ * @param num1
+ * @param num2
  */
-const multiplication = (num1: number, num2: number): number => {
+const divide = (num1: number, num2: number): number => {
   let r1; let r2;
   try {
     r1 = num1.toString().split('.')[1].length;
@@ -16,7 +16,7 @@ const multiplication = (num1: number, num2: number): number => {
     r2 = 0;
   }
   const m = 10 ** (r1 + r2);
-  return ((num1 * m) * (num2)) / m;
+  return ((num1 * m) / (num2)) / m;
 };
 
-export default multiplication;
+export default divide;
