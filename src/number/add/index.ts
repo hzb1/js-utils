@@ -4,7 +4,8 @@
  * @param num2
  */
 
-const summation = (num1: number, num2: number): number => {
+const add = (num1: number, num2: number): number => {
+  // return num1 + num2;
   let r1; let r2;
   try {
     r1 = num1.toString().split('.')[1].length;
@@ -18,11 +19,6 @@ const summation = (num1: number, num2: number): number => {
   }
   const m = 10 ** Math.max(r1, r2);
   return Math.round(num1 * m + num2 * m) / m;
-};
-
-const add = (...ages: number[]): number => {
-  const n = ages.reduce((per, cur) => summation(per, cur), 0);
-  return n;
 };
 
 export default add;
