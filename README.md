@@ -2,5 +2,5 @@
 
 ```
  使用TypeScript开发，提供了完整的类型声明
- 使用karma + mocha来测试，测试覆盖率80%以上
+ 使用karma + mocha expect来测试，测试覆盖率80%以上
 ```

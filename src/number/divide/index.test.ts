@@ -16,8 +16,8 @@ describe('divide 相除', () => {
     expect(divide(3, 0.3)).to.equal(10);
   });
 
-  it('0.1 除 0.2 应该等于 0.02', () => {
-    expect(divide(0.1, 0.2)).to.equal(0.02);
+  it('0.1 除 0.2 应该等于 0.5', () => {
+    expect(divide(0.1, 0.2)).to.equal(0.5);
   });
 
   it('-1.1 除 100.000 应该等于 -0.011', () => {
