@@ -34,6 +34,8 @@ module.exports = function (config) {
       'karma-chrome-launcher',
       'karma-spec-reporter',
       'karma-coverage-istanbul-reporter',
+      'karma-safari-launcher',
+      'karma-firefox-launcher'
     ],
 
     webpack: {
@@ -111,8 +113,11 @@ module.exports = function (config) {
     browsers: [
       'Chrome',
       // 'IE',
-      // 'Safari',
-      // 'Firefox',
+      'Safari',
+      'Firefox',
+      'FirefoxDeveloper',
+      'FirefoxAurora',
+      'FirefoxNightly',
       // 'Opera',
       // 'ChromeHeadless',
     ],
