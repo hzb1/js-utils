@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import dateFormat from './index';
+import dateFormat from './dateFormat';
 import deconstructDate, { deconstructDateInterface } from '../deconstructDate';
 
 describe('dateFormat 测试', () => {
