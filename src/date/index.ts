@@ -1,4 +1,4 @@
-import dateFormat from './dateFormat';
+import dateFormat from './dateFormat/dateFormat';
 import deconstructDate from './deconstructDate';
 import isSameDay from './isSameDay';
 import isDate from './isDate';

@@ -2,7 +2,7 @@
 // Generated on Wed Sep 16 2020 10:45:59 GMT+0800 (China Standard Time)
 const path = require('path');
 
-module.exports = function (config) {
+module.exports = (config) => {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -35,7 +35,7 @@ module.exports = function (config) {
       'karma-spec-reporter',
       'karma-coverage-istanbul-reporter',
       'karma-safari-launcher',
-      'karma-firefox-launcher'
+      'karma-firefox-launcher',
     ],
 
     webpack: {
