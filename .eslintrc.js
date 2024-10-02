@@ -17,6 +17,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'no-unused-expressions': 'off',
     'import/no-unresolved': 'off',
     'import/no-extensions': 'off',
     'import/extensions': 'off',
